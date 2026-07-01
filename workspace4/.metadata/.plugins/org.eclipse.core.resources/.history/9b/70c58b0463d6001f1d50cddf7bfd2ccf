@@ -1,0 +1,17 @@
+package learn;
+
+public class SumMinMax {
+
+	public static void main(String[] args) {
+
+		int arr[] = {-2, 1, -4, 5, 3};
+		int min = arr[0];
+		int m = arr[0];
+		
+		for(int b:arr) {
+			if(m<b) m=b;
+			if(min>b) min =b;
+		} System.out.println(m+min);  
+	}
+
+}

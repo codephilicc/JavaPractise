@@ -1,0 +1,45 @@
+package learn;
+
+public class ClosestMinMax {
+
+	public static void main(String[] args) {
+		int[] A = { 4, 5, 2, 3, 1 };
+
+		int mn = Integer.MAX_VALUE;
+		int mx = Integer.MIN_VALUE;
+		int n = A.length;
+		for (int i = 0; i < n; i++) {
+			if (A[i] > mx) {
+				mx = A[i];
+			}
+			if (A[i] < mn) {
+				mn = A[i];
+			}
+		}
+		System.out.println(mx);
+
+		System.out.println(mn);
+
+		int lid = -1;
+		int rid = -1;
+		int ans = n;
+
+		for (int k = 0; k < n; k++) {
+			if (A[k] == mx) {
+				rid = Math.max(rid, k);
+			}
+			if (A[k] == mn) {
+				lid = Math.max(lid, k);
+
+			}
+
+			if (mn != -1 && mx != -1) {
+				ans = Math.min(ans,( Math.abs(rid - lid) + 1));
+			}
+
+		}
+		System.out.println(ans);
+
+	}
+
+}

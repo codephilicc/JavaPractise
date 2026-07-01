@@ -1,0 +1,25 @@
+package learn;
+
+public class BestTimetobuysellstock {
+
+	public static void main(String[] args) {
+		int[] A = {};
+		int n = A.length;
+		
+
+		if (A.length == 0 || A.length == 1) {
+			System.out.println(0);
+		
+		}
+		int mx = A[n - 1];
+		int profit = 0;
+		for (int i = A.length - 2; i >= 0; i--) {
+			if (A[i] > mx) {
+				mx = A[i];
+			}
+			profit = Math.max(profit, mx - A[i]);
+		}
+		System.out.println(profit);
+	}
+
+}

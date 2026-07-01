@@ -1,0 +1,42 @@
+package learn;
+
+public class PermutationinString567 {
+
+	public static void main(String[] args) {
+
+		String s1 = "ab", s2 = "eidbaooo";
+		
+		int n1 = s1.length();
+        int n2  = s2.length();
+
+        if(n2<n1){
+            System.out.println("false");
+        }
+        StringBuffer s3 = new StringBuffer();
+
+        for(int i=0;i<n1;i++){
+            s3.append(s2.charAt(i));
+        }
+        if((s3.toString()).equals(s1)){
+        	System.out.println("true");
+//            return true;    
+        }
+        boolean flag = false;
+        for(int j=n1;j<=n2;j++){
+            s3.deleteCharAt(n1-n1);
+            s3.append(n1);
+            StringBuffer s4 = s3.reverse();
+            if((s3.toString()).equals(s1) || (s4.toString()).equals(s1)){
+                flag=true;
+                break;
+            }
+        } 
+        if(flag){
+        	System.out.println("true");
+//            return true;
+        }
+        System.out.println("false");
+//        return false;
+	}
+
+}

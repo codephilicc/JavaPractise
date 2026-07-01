@@ -1,0 +1,19 @@
+package learn;
+
+public class AmazingSubarrays {
+
+	public static void main(String[] args) {
+		
+		String A="pGpEusuCSWEaPOJmamlFAnIBgAJGtcJaMPFTLfUfkQKXeymydQsdWCTyEFjFgbSmknAmKYFHopWceEyCSumTyAFwhrLqQXbWnXSn";
+		 String s = A.toUpperCase();
+	        long ans=0;
+	        int n = s.length();
+	        for(int i=n-1;i>=0;i--){
+	            if(s.charAt(i)=='A'|| s.charAt(i)=='E'||s.charAt(i)=='I'||s.charAt(i)=='O'||s.charAt(i)=='U'){
+	                ans+=i+1;
+	            }
+	        } System.out.println(ans);
+
+	}
+
+}

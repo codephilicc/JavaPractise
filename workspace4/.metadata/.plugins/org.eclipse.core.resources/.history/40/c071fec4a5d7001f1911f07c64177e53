@@ -1,0 +1,15 @@
+package learn;
+
+public class EvenNumRange {
+
+	public static void main(String[] args) {
+
+		int a[]	 = {1, 2, 0, 3};
+		int n = a.length;
+		int ans=0;
+//		
+		
+		
+	}
+
+}

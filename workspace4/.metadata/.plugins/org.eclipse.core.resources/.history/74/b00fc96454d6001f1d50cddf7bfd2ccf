@@ -1,0 +1,62 @@
+package learn;
+
+public class FindEquilibrium {
+
+	public static void main(String[] args) {
+
+		int a[]	 = {-7, 1, 5, 2, -4, 3, 0};
+		int n = a.length;
+		int count=0;
+//		int p1[]= new int[n];
+//		int sum = 0;
+//		for(int i =0;i<n;i++) {
+//			if(i==0) {
+//				p1[i]=0;
+//			}
+//			if(i>0) {
+//				sum +=a[i-1];
+//				p1[i]=sum;
+//			}
+//		}
+//		
+//		int p2[] = new int[n];
+//		int sum2 = 0;
+//		for(int j=n-1;j>=0;j--) {
+//			if(j==n-1) {
+//				p2[n-1]=0;
+//			}
+//			if(j!=(n-1)) {
+//				sum2+=a[j+1];
+//				p2[j]=sum2;
+//			}
+//		}
+//		
+//		for(int k=0;k<n;k++) {
+//			if(p1[k]==p2[k]) {
+//				count++;
+//			}
+//			
+//		} 
+//		System.out.println(count);
+		
+		int ls =0;
+		int total = 0;
+		
+		for(int b:a ) {
+			total+=b;
+		}
+		
+//		ls+i+rs = total
+		 for(int i =0;i<n;i++) {
+			 int rs = total-ls-a[i];
+			 
+			 if(rs==ls) {
+				 count++;
+			 }
+			 ls+=a[i];
+		 }
+		System.out.println(count);
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+package learn;
+
+import java.util.Arrays;
+
+public class PrintSubarray {
+
+	public static void main(String[] args) {
+
+		int[] arr = {3,2,1,4};
+		
+		int n = arr.length;
+////		int m = (n*(n+1))/2;
+//		
+//		int[] pf = new int[n];
+//		pf[0]=arr[0];
+//		
+//		for(int i=1;i<n;i++) {
+//			pf[i]=pf[i-1]+arr[i];
+//		}
+//		System.out.println(Arrays.toString(pf));
+//		int sum=0;
+		for(int k=0;k<n;k++) {
+			int sum=0;
+			for(int j=k;j<k;j++) {
+				sum+=arr[j];
+//				if(k==0) {
+//					sum=pf[j];
+//				}else {
+//					sum=pf[j]-pf[k-1];
+//				}
+				System.out.println(sum);
+			}
+			System.out.println("final"+sum);
+		}
+		
+	}
+
+}

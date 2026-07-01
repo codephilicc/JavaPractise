@@ -1,0 +1,54 @@
+package learn;
+
+import java.util.Arrays;
+
+public class DoubleZero {
+
+//	    public void duplicateZeros(int[] arr) {
+	public static void main(String[] args) {
+
+		int[] arr = { 1, 0, 2, 3, 0, 4, 5, 0 };
+
+		int arrLen = arr.length;
+		int[] outArr = new int[arrLen];
+
+		int ipIndex = 0;
+		int opIndex = 0;
+
+		while (ipIndex <= arrLen) {
+
+			if (arr[ipIndex] == 0 && opIndex<arrLen) {
+
+				outArr[opIndex] = 0;
+				ipIndex++;
+				
+				if (opIndex + 1 == arrLen) {
+					System.out.println(Arrays.toString(outArr));
+					break;
+				}
+				opIndex++;
+				outArr[opIndex] = 0;
+				
+				
+				if (opIndex+1 == arrLen) {
+					System.out.println(Arrays.toString(outArr));
+					break;
+				}
+				opIndex++;
+				
+			}
+
+			else {
+				System.out.println("ip: "+ipIndex + "Arrval "+arr[ipIndex]);
+				outArr[opIndex] = arr[ipIndex];
+				opIndex++;
+				ipIndex++;
+				if (opIndex + 1 == arrLen) {
+					System.out.println(Arrays.toString(outArr));
+					break;
+				}
+			}
+		}
+
+	}
+}
