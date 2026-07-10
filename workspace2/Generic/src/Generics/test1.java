@@ -1,4 +1,4 @@
-package Generics;
+
 
 interface Printable{}  
 class A implements Printable{  

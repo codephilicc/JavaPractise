@@ -1,13 +1,12 @@
-package Generics;
 
 public class Test {
 
 	public static void main(String[] args) {
 
-		Box<String> str=new Box<>("Book");
+		Generics.Box<String> str=new Generics.Box<>("Book");
 		System.out.println(str.getValue());
 		
-		Box<Integer> itr = new Box<>(123);
+		Generics.Box<Integer> itr = new Generics.Box<>(123);
 		System.out.println(itr.getValue());
 	}
 
